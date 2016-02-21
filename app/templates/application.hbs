@@ -1,3 +1,16 @@
-<h2 id="title">Welcome to Ember</h2>
+
+<div class="title">veOptimizer
+	<nav>
+		{{#if session.isAuthenticated}}
+		<!--If the session is atenticated this will show logout, all this set up by the file application.js in controllers folder-->
+			<button {{action 'logout'}}>Logout</button>
+		{{else}}
+			{{#link-to 'login'}}
+				login
+			{{/link-to}}
+		{{/if}}
+	</nav>
+</div>
+
 
 {{outlet}}
