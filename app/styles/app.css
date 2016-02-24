@@ -1,7 +1,98 @@
 body{
 	background-color: white;
 }
-#login{
+#autoCreative{
+    position: absolute;
+    right: 0;
+    width: 40%;
+    text-align: center;
+    height: 100%;
+    padding-bottom: 40px;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#banners{
+	height: auto;
+    float: left;
+    width: 150px;
+}
+#banners button{
+	width: 100px;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.content{
+    background-color: #309FBB;
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+    top: 113px;
+    height: 100%;
+    overflow-y: auto;
+}
+#creationSection{
+	display: block;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 40px;
+}
+
+#footer{
+	margin: -40px 0 0 0;
+	display: block;
+	position: fixed;
+	width: 100%;
+	padding: 10px;
+	background-color: #186C81;
+	text-align: center;
+	bottom: 0;
+	color: #fff;
+
+}
+
+#header{
+	display: block;
+	width: 100%;
+	padding: 20px;
+	top: 0;
+	left: 0px;
+	background-color: red;
+	color: #fff;
+	background-color: #186C81;
+	font-size: 20px;
+	position: absolute;
+    height: 60px;
+
+	
+}
+#header a{
+	text-decoration: none;
+	color: #fff;
+}
+
+
+.layoutSection{
+	width: 25%;
+	float: left;
+	background-color: #E0E0E0;
+	background: rgba(255,255,255,1);
+	background: rgba(246,246,246,1);
+	border-right: 1px solid #ccc;
+	font-style: italic;
+	height: 40px;
+    padding: 10px;
+	}
+
+.layoutSection.selected{
+	color: #186C81;
+    font-weight: bold;
+}
+
+.login{
 	right: 20px;
     display: inline-block;
     position: fixed;
@@ -9,13 +100,121 @@ body{
     text-decoration: none;
 }
 
-.title{
-	width: auto;
-	padding: 20px;
-	top: 0;
-	left: 0px;
-	background-color: red;
-	color: white;
-	background-color: #186C81;
-	font-size: 20px;
+.mainBanners{
+	display: block;
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    background: rgba(147,206,222,1);
+	background: rgba(212,228,239,1);
+	background: -moz-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212,228,239,1)), color-stop(100%, rgba(134,174,204,1)));
+	background: -webkit-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+	background: -o-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+	background: -ms-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+	background: linear-gradient(to bottom, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=0 );
 }
+
+.mainBanners#veContactPart{
+	top: 0;
+}
+
+.mainBanners#vePromptPart{
+	bottom: 0;
+}
+.navbar{
+	border-radius: 0px;
+	z-index: 2;
+	position: absolute;
+    left: 0;
+    width: 100%;
+    top: 60px;
+}
+.navbar-default{
+	border-bottom: 2px solid #186C81;
+}
+.navbar-nav li.active:after, .navbar-nav li.active:before {
+	bottom: 0%;
+    margin-bottom: -2px;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.navbar-nav li.active:after {
+	border-bottom-color: #309FBB;
+	border-width: 6px;
+	margin-left: -6px;
+    z-index: 1;
+}
+.navbar-nav li.active:before {
+	border-bottom-color: #186C81;
+	border-width: 9px;
+	margin-left: -9px;
+    z-index: 1;
+}
+#pieces{
+	float: left;
+    width: 60%;
+    position: relative;
+    height: 100%;
+    padding: 20px;
+}
+#sectors{
+	position: absolute;
+    width: 100%;
+    height: 40px;
+    display: block;
+    text-align: center;
+}
+#slices{
+	height: auto;
+    float: left;
+    width: 75%;
+    border: solid 1px #ccc;
+}
+
+
+/*Responsive part*/
+@media only screen and (max-width: 768px) {
+
+.navbar-default{
+	border-bottom: 1px solid #ccc;
+}
+.navbar-nav li.active:after, .navbar-nav li.active:before {
+	bottom: 0%;
+    margin-bottom: 0px;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.navbar-nav li.active:after {
+	border-bottom-color: transparent;
+	border-width: 6px;
+	margin-left: -6px;
+    z-index: 0;
+}
+.navbar-nav li.active:before {
+	border-bottom-color: transparent;
+	border-width: 9px;
+	margin-left: -9px;
+    z-index: 1;
+}
+
+}
+
+
+
+
