@@ -1,14 +1,4 @@
 
-	<div id="header">{{#link-to 'index'}}veOptimizer{{/link-to}}
-			{{#if session.isAuthenticated}}
-			<!--If the session is atenticated this will show logout, all this set up by the file application.js in controllers folder-->
-				<button class="login" {{action 'logout'}}>Logout</button>
-			{{else}}
-				{{#link-to 'login'}}
-					<span class="login">login</span>
-				{{/link-to}}
-			{{/if}}
-	</div>
 {{partial 'navbar'}}
 
 <div class="content">

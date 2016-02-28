@@ -1,6 +1,7 @@
 <!--@@Navigator-->
 <nav class="navbar navbar-default topBarmenu" role="navigation">
     <div class="navbar-header">
+    {{#link-to 'index'}}<a class="navbar-brand">veOptimizer</a>{{/link-to}}
         <button type="button" class="navbar-toggle" data-toggle="collapse"
     data-target=".navbar-ex1-collapse">
           <span class="sr-only">Show navigation bar</span>
@@ -12,12 +13,13 @@
         
     </div>
      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav navbar-right">
             {{#link-to 'index' tagName='li'}}<a href="">index </a>{{/link-to}}
             {{#link-to 'vecontact' tagName='li'}}<a href="">veContact</a>{{/link-to}}
             {{#link-to 'veprompt' tagName='li'}}<a href="">vePrompt</a>{{/link-to}}
             {{#link-to 'token' tagName='li'}}<a href="">token</a>{{/link-to}}
             {{#link-to 'contactus' tagName='li'}}<a href="">contact us</a>{{/link-to}}
+            {{#link-to 'login' tagName='li'}}<a href="">login</a>{{/link-to}}
         </ul>
     </div>
 

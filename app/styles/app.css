@@ -12,33 +12,36 @@ body{
     border-bottom: 1px solid #ccc;
 }
 
-#banners{
-	height: auto;
+#sectors{
     float: left;
     width: 150px;
+    background-color: #156073;
+    padding: 20px;
+    height: 100%;
+    overflow-y:auto;
 }
-#banners button{
+#sectors button{
 	width: 100px;
     padding: 10px;
     margin-bottom: 20px;
     display: block;
 }
 
+
 .content{
     background-color: #309FBB;
     width: 100%;
     position: absolute;
     bottom: 40px;
-    top: 113px;
     height: 100%;
     overflow-y: auto;
+	top:52px;
 }
 #creationSection{
 	display: block;
     position: absolute;
-    height: auto;
+    height: 100%;
     width: 100%;
-    top: 40px;
 }
 
 #footer{
@@ -54,7 +57,7 @@ body{
 
 }
 
-#header{
+/*#header{
 	display: block;
 	width: 100%;
 	padding: 20px;
@@ -64,15 +67,24 @@ body{
 	color: #fff;
 	background-color: #186C81;
 	font-size: 20px;
-	position: absolute;
+	position: fixed;
     height: 60px;
-
+	z-index: 2;
 	
 }
 #header a{
 	text-decoration: none;
 	color: #fff;
 }
+
+#header .login{
+	right: 20px;
+    display: inline-block;
+    position: fixed;
+    color: white;
+    text-decoration: none;
+}
+*/
 
 
 .layoutSection{
@@ -92,13 +104,7 @@ body{
     font-weight: bold;
 }
 
-.login{
-	right: 20px;
-    display: inline-block;
-    position: fixed;
-    color: white;
-    text-decoration: none;
-}
+
 
 .mainBanners{
 	display: block;
@@ -125,17 +131,44 @@ body{
 .mainBanners#vePromptPart{
 	bottom: 0;
 }
+
+
 .navbar{
 	border-radius: 0px;
 	z-index: 2;
 	position: absolute;
     left: 0;
     width: 100%;
-    top: 60px;
+    border: 0px;
 }
+
 .navbar-default{
 	border-bottom: 2px solid #186C81;
+	position: fixed;
+	background-color: #186C81;
 }
+
+.navbar-default .navbar-brand {
+	width: 150px;
+   	color: #fff;
+    background-color: #156073;
+}
+.navbar-default .navbar-brand:hover {
+   	color: #fff;
+    background-color: #156073;
+}
+
+.navbar-default .navbar-nav>li>a{
+	color: #fff;
+}
+.navbar-default .navbar-nav>li>a:hover{
+	color: #D4C5C5;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+	color: #156073;
+}
+
 .navbar-nav li.active:after, .navbar-nav li.active:before {
 	bottom: 0%;
     margin-bottom: -2px;
@@ -159,20 +192,6 @@ body{
 	border-width: 9px;
 	margin-left: -9px;
     z-index: 1;
-}
-#pieces{
-	float: left;
-    width: 60%;
-    position: relative;
-    height: 100%;
-    padding: 20px;
-}
-#sectors{
-	position: absolute;
-    width: 100%;
-    height: 40px;
-    display: block;
-    text-align: center;
 }
 #slices{
 	height: auto;
