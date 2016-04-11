@@ -1,0 +1,8 @@
+{
+  "firebase": "veoptimazer",
+  "public": "dist",
+  "rewrites": [{
+    "source": "**",
+    "destination": "/index.html"
+  }]
+}

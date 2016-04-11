@@ -1,12 +1,15 @@
 
 <div id="creationSection">
-	<div id="pieces">
-		<div id="banners">
-		</div>
-		<div id="slices">
-		</div>
-	</div>
-	{{partial 'auto-creative'}}
+	{{#each model as |contactus|}}
+		<div class="panel panel-default">
+	        <div class="panel-heading">
+	            <h3 class="panel-title">{{contactus.email}}</h3>
+	        </div>
+	        <div class="panel-body">
+	            <p>Address: {{contactus.message}}</p>
+	        </div>
+    	</div>
+	{{/each}}
 	{{outlet}}
 </div>
 

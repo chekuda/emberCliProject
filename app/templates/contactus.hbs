@@ -1,2 +1,31 @@
-ContactUs
+<div class="container-fluid">
+	<div class="panel panel-default contactUs">
+		<div class="panel-heading">
+			Please contact us or give us any feedback
+		</div>
+		<div class="panel-body">
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label for="inputEmailcontact" class="col-sm-2 control-label">Email</label>
+					<div class="col-sm-10">
+						{{input type="email" value=emailAddress class="form-control" id="inputEmailcontact" placeholder="Type your email here"}}
+					</div>
+					<label for="inputTextcontact" class="col-sm-2 control-label">Text</label>
+					<div class="col-sm-10">
+						{{textarea value=textArea class="form-control" id="inputTextcontact" row="5" placeholder="Type your feedback"}}
+					</div>
+				</div>
+				<div class="col-sm-offset-2">
+				 <button type="submit" disabled={{isDisabled}} {{action "sendContactMessage"}} class="btn btn-default">Send</button>
+				</div>
+			</form>
+		</div>
+		{{#if responseMessage}}
+			<div class="alert alert-success text-center">
+				{{responseMessage}}
+			</div>
+		{{/if}}
+	</div>
+	
+</div>
 {{outlet}}

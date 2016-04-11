@@ -12,21 +12,22 @@ body{
     border-bottom: 1px solid #ccc;
 }
 
-#sectors{
-    float: left;
-    width: 150px;
-    background-color: #156073;
-    padding: 20px;
+#banners{
+	float: left;
     height: 100%;
     overflow-y:auto;
+    overflow-x: hidden;
 }
-#sectors button{
-	width: 100px;
-    padding: 10px;
-    margin-bottom: 20px;
-    display: block;
+.bannersColumnTitle{
+	display: block;
+	width: 100%;
 }
 
+.bannerColumn{
+	padding: 25px;
+	border: solid 2px #fff;	
+	width: 250px;
+}
 
 .content{
     background-color: #309FBB;
@@ -42,6 +43,10 @@ body{
     position: absolute;
     height: 100%;
     width: 100%;
+}
+#creativeBox{
+	display: block;
+    float: left;
 }
 
 #footer{
@@ -193,12 +198,72 @@ body{
 	margin-left: -9px;
     z-index: 1;
 }
+
+.panel.panel-default.contactUs
+{
+	width: 70%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+#sectors{
+    float: left;
+    width: 150px;
+    background-color: #156073;
+    height: 100%;
+    overflow-y:auto;
+}
+
+#sectors button{
+	width: 100px;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: block;
+}
+
 #slices{
 	height: auto;
     float: left;
     width: 75%;
     border: solid 1px #ccc;
 }
+
+
+ul.sectorList{
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.sectorList li#headerSectorList{
+	color: #fff;
+    border-bottom: solid 2px #fff;
+    text-align: center;
+    padding: 5px;
+    border-top: solid 2px #fff;
+}
+
+ul.sectorList .sector{
+	text-align: center;
+    display: block;
+
+}
+
+ul.sectorList .sector a{
+	
+	display: block;
+    padding: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+ul.sectorList .sector a:hover{
+	
+	display: block;
+    padding: 5px;
+    color: #ccc;
+}
+
+
 
 
 /*Responsive part*/

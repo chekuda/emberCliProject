@@ -1,18 +1,76 @@
 
+
 <div id="creationSection">
 	<div id="sectors">
-		<button class="btn btn-primary">Finance</button>
-		<button class="btn btn-primary">Travel</button>
-		<button class="btn btn-primary">Economic</button>
-		<button class="btn btn-primary">Sport</button>
-		<button class="btn btn-primary">Finance</button>
-		<button class="btn btn-primary">Travel</button>
-		<button class="btn btn-primary">Economic</button>
-		<button class="btn btn-primary">Sport</button>
+		<ul class="sectorList">
+		  <li id="headerSectorList">
+		  	<span>SECTORS</span>
+		  </li>
+		  {{#each model as |sectorImages|}}
+		  	<li class="sector">
+		    {{#link-to 'veprompt' tagName='li'}}<a {{action "changeBody"}} class="linkSector" href="">{{sectorImages.id}}</a>{{/link-to}}
+		  </li>
+		  {{/each}}
+		</ul>
 	</div>
+	{{#if isSectorSelected}}
 	<div id="creativeBox">
-	<img src="../public/assets/images/pointer.jpeg" alt="pointer">PLEASE CHOOSE YOUR SECTOR
+		<div id="banners">
+			<div class="bannersColumn">
+				<div class="panel panel-default">
+			        <div class="panel-heading">
+			        	<h3 class="panel-title">
+					       <a data-toggle="collapse" href="#banner">BANNERS</a>
+					    </h3>
+			        </div>
+			        <div id="banner" class="panel-collapse collapse">
+				        <div class="panel-body">
+				            {{#each model as |sectorImages|}}
+								<img src="{{sectorImages.source}}" {{action "testing" sectorImages.source}} width="200" height="200"/>
+							{{/each}}
+				        </div>
+			    	</div>
+		    	</div>
+		    	<div class="panel panel-default">
+			        <div class="panel-heading">
+			            <h3 class="panel-title">
+			            	<a href="#cta" data-toggle="collapse">Buttons</a>
+			            </h3>
+			        </div>
+			        <div id="cta" class="panel-collapse collapse">
+				        <div class="panel-body">
+				            {{#each model as |sectorImages|}}
+								<img src="{{sectorImages.source}}" {{action "testing" sectorImages.source}} width="200" height="200"/>
+							{{/each}}
+				        </div>
+			       	</div>
+		    	</div>
+		    	<div class="panel panel-default">
+			        <div class="panel-heading">
+			            <h3 class="panel-title">
+			            	<a href="#copy" data-toggle="collapse">Text</a>
+			            </h3>
+			        </div>
+					<div id="copy" class="panel-collapse collapse">
+				        <div class="panel-body">
+				            {{#each model as |sectorImages|}}
+								<img src="{{sectorImages.source}}" {{action "testing" sectorImages.source}} width="200" height="200"/>
+							{{/each}}
+				        </div>
+				    </div>
+		    	</div>
+			</div>
+		</div>
 	{{outlet}}
 	</div>
+	{{auto-creative display=shouldBeDisplayed image=realTimeImage}}
+	{{else}}
+	<div class="jumbotron text-center">
+		<h1>Ready for your new creative??</h1>
+		<br><br>
+		<img src="/assets/images/arrow.png" with="100" height="100"/>Please choose any of these sectors
+
+	</div>
+	{{/if}}
 </div>
 

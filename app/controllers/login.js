@@ -6,9 +6,10 @@ export default Ember.Controller.extend({
 	actions:{
 		authenticate(){
 			//fir we get the indentification and password values
-			let {identification, password} = this.getProperties('identification','password');
+			var credentials = this.get('identification','password'), 
+				authenticator = 'simple-auth-authenticator:token';
 			//this authenticate action involve the session services. We send the two variables
-			this.get('session').authenticate('authenticator:oauth2',identification, password).catch((reason)=>{
+			 this.get('session').authenticate(authenticator, credentials).catch((reason)=>{
 				this.set("errorMessage",reason.error);
 			});
 		}

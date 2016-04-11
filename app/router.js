@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('veprompt');
   this.route('contactus');
   this.route('token');
+  this.route('basket');
 });
 
 export default Router;
